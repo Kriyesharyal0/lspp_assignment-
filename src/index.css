@@ -1,0 +1,126 @@
+:root {
+  --font: 'Poppins', sans-serif;
+
+  /* New color scheme — indigo & coral instead of green & gold */
+  --color-primary: #312e81;
+  --color-secondary: #4f46e5;
+  --color-accent: #f97316;
+  --color-gold: #eab308;
+  --color-indigo: #4338ca;
+  --color-text: #1e1b4b;
+  --color-text-muted: #4b5563;
+  --color-bg: #ffffff;
+  --color-bg-soft: #eef2ff;
+  --color-bg-warm: #fff7ed;
+  --color-bg-dark: #1e1b4b;
+  --color-border: #e0e7ff;
+  --color-progress: #6366f1;
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --shadow: 0 8px 32px rgba(49, 46, 129, 0.08);
+  --container: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-heading {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+}
+
+.text-center { text-align: center; }
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-accent { color: var(--color-accent); }
+.text-gold { color: var(--color-gold); }
+.text-indigo { color: var(--color-indigo); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--color-secondary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary);
+}
+
+.btn-secondary {
+  background: var(--color-accent);
+  color: #fff;
+}
